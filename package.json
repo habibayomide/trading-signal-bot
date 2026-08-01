@@ -1,0 +1,27 @@
+{
+  "name": "trading-signal-bot",
+  "version": "0.1.0",
+  "description": "Intraday signal bot for crypto — confluence, support/resistance, and SMC (BOS/CHoCH) strategies with backtesting",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/bot/journalBot.js",
+    "start:signals": "node src/index.js",
+    "test:crypto-feed": "node src/data/cryptoFeed.js",
+    "test:bot": "node src/bot/alertBot.js",
+    "backtest": "node src/backtest/runBacktest.js",
+    "ablation": "node src/backtest/runAblation.js",
+    "factor-ablation": "node src/backtest/runFactorAblation.js",
+    "backtest:sr": "node src/backtest/runSRBacktest.js",
+    "backtest:sr-oos": "node src/backtest/runOutOfSample.js",
+    "backtest:smc": "node src/backtest/runSMCBacktest.js",
+    "journal": "node src/bot/journalBot.js"
+  },
+  "dependencies": {
+    "ccxt": "^4.3.0",
+    "technicalindicators": "^3.1.0",
+    "axios": "^1.7.2",
+    "node-telegram-bot-api": "^0.66.0",
+    "dotenv": "^16.4.5"
+  }
+}
